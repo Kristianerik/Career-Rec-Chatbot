@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- Is the User a Computer Science Major Seeking advice section -->
+	
+	<category>
+	    <pattern>yes ^</pattern>
+	    <template>
+	        Okay in order for me to help you please answer a few questions. What is your major?
+	        <button>
+	            <text>Computer Science Major</text>
+	            <postback>computerscience</postback>
+	        </button>
+	        <button>
+	            <text>Non-Computer Science Major</text>
+	            <postback>noncomputerscience</postback>
+	        </button>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>noncomputerscience</pattern>
+	    <template>I'm sorry, I only have the capability of helping computer science students. Please close the chat window.</template>
+	</category>
+	
+	<category>
+	    <pattern>computerscience</pattern>
+	    <template>
+	        Thank you, are you more comfortable with programming or designing a product?
+	        <button>
+	            <text>Programming</text>
+	            <postback>programming</postback>
+	        </button>
+	        <button>
+	            <text>Designing</text>
+	            <postback>designing</postback>
+	        </button>
+	    </template>
+	</category>
+		
+	
+	<!-- Career Rec Programming -->
+	<category>
+	    <pattern>programming</pattern>
+	    <template>
+	        Which of these choices interest you the most?
+	        <carousel>
+	            <card>
+	                <image>https://bizmo.al/wp-content/uploads/2022/03/Web-Dev-Blog.png</image>
+	                <title>Website Development</title>
+	                <subtitle>Creating Web Applications</subtitle>
+	                <button>
+	                    <text>Select</text>
+	                    <postback>webdevback</postback>
+                    </button>
+                </card>
+                <card>
+	                <image>https://engineeringcolleges.home.blog/wp-content/uploads/2019/09/an-overview-of-the-mobile-operating-system-for-btech-grads.png</image>
+	                <title>Mobile Devices</title>
+	                <subtitle>Understanding Phone Systems</subtitle>
+	                <button>
+	                    <text>Select</text>
+	                    <postback>phoneosdev</postback>
+                    </button>
+                </card>
+                <card>
+	                <image>https://tdwi.org/articles/2019/07/09/-/media/TDWI/TDWI/BITW/AI17.jpg</image>
+	                <title>Data Science</title>
+	                <subtitle>Understanding and Using Data</subtitle>
+	                <button>
+	                    <text>Select</text>
+	                    <postback>aiengineer</postback>
+                    </button>
+                </card>
+            </carousel>
+	    </template>
+	</category>
+	
+	<!-- Programming Selection Job Recs -->
+	
+	<category>
+	    <pattern>webdevback</pattern>
+	    <template>
+	    <link>
+	        <text>I would reccommend applying for the role of Backend web developer based on your selections.</text>
+	        <url>https://www.simplilearn.com/tutorials/programming-tutorial/what-is-backend-development</url>
+        </link>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>phoneosdev</pattern>
+	    <template>
+	    <link>
+	        <text>I would reccommend applying for the role of Mobile developer based on your selections.</text>
+	        <url>https://in.indeed.com/career-advice/finding-a-job/mobile-developer-job-description</url>
+        </link>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>aiengineer</pattern>
+	    <template>
+	    <link>
+	        <text>I would reccommend applying for the role of Artificial Intelligence Engineer based on your selections.</text>
+	        <url>https://www.indeed.com/career-advice/finding-a-job/ai-engineer</url>
+        </link>
+	    </template>
+	</category>
+	
+	<!-- Design Career Rec -->
+	<category>
+	    <pattern>designing</pattern>
+	    <template>
+	        Which of these choices interest you the most?
+	        <carousel>
+	            <card>
+	                <image>https://www.namasteui.com/wp-content/uploads/2018/08/front-end-web-development.jpg</image>
+	                <title>Website Development</title>
+	                <subtitle>Creating Web Applications</subtitle>
+	                <button>
+	                    <text>Select</text>
+	                    <postback>webdevfront</postback>
+                    </button>
+                </card>
+                <card>
+	                <image>https://img.etimg.com/thumb/msid-70533809,width-300,height-225,imgsize-268807,resizemode-75/istock-131404860final.jpg</image>
+	                <title>Phone Apps</title>
+	                <subtitle>Creating Phone Applications</subtitle>
+	                <button>
+	                    <text>Select</text>
+	                    <postback>appdev</postback>
+                    </button>
+                </card>
+                <card>
+	                <image>https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/Data%20Science%201600x800.jpg</image>
+	                <title>Data Science</title>
+	                <subtitle>Understanding and Using Data</subtitle>
+	                <button>
+	                    <text>Select</text>
+	                    <postback>datascientist</postback>
+                    </button>
+                </card>
+            </carousel>
+	    </template>
+	</category>
+	
+	<!-- Programming Selection Job Recs -->
+	<category>
+	    <pattern>webdevfront</pattern>
+	    <template>
+	    <link>
+	        <text>I would reccommend applying for the role of Frontend web developer based on your selections.</text>
+	        <url>https://frontendmasters.com/guides/front-end-handbook/2018/what-is-a-FD.html</url>
+        </link>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>appdev</pattern>
+	    <template>
+	    <link>
+	        <text>I would reccommend applying for the role of Mobile Application developer based on your selections.</text>
+	        <url>https://www.ibm.com/topics/mobile-application-development</url>
+        </link>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>datascientist</pattern>
+	    <template>
+	    <link>
+	        <text>I would reccommend applying for the role of Data Scientist based on your selections.</text>
+	        <url>https://ischoolonline.berkeley.edu/data-science/what-is-data-science/</url>
+        </link>
+	    </template>
+	</category>
+	
+</aiml>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+      <!-- Greetings Section -->
+    <pattern>Hello</pattern>
+    <template>Greetings my name is Charles. Please Type "Start" to begin.</template>
+  </category>
+  <category>
+    <pattern>Hi</pattern>
+    <template>Greetings my name is Charles. Please Type "Start" to begin.</template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <template>I am sorry I do not understand please type "Start" to begin.</template>
+  </category>
+  
+  
+</aiml>
