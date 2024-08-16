@@ -3,7 +3,7 @@
 	<!-- Is the User a Computer Science Major Seeking advice section -->
 	
 	<category>
-	    <pattern>yes ^</pattern>
+	    <pattern>^ yes ^</pattern>
 	    <template>
 	        Okay in order for me to help you please answer a few questions. What is your major?
 	        <button>
